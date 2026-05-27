@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلاب الازدهار | تنفيذ الخدمات الحكومية الرقمية</title>
+    <meta name="description" content="نقدم خدمات منصة أبشر، قوى، مدد، بلدي وغيرها. تنفيذ سريع واحترافي بدون عناء الحضور الشخصي">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+        
+        * {
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #eef2f7 100%);
+        }
+        
+        /* navbar */
+        .navbar {
+            background: white !important;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            padding: 15px 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: #1e6f5c !important;
+        }
+        
+        .navbar-brand span {
+            color: #ffb347;
+        }
+        
+        /* hero section */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-weight: 800;
+            font-size: 2.8rem;
+            color: #1e3c4c;
+            margin-bottom: 20px;
+        }
+        
+        .hero h1 span {
+            color: #1e6f5c;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: #5a6e7a;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .whatsapp-float-btn {
+            background: #25D366;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(37,211,102,0.3);
+        }
+        
+        .whatsapp-float-btn:hover {
+            background: #20b859;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        /* stats */
+        .stats-section {
+            background: white;
+            border-radius: 30px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1e6f5c;
+        }
+        
+        .stat-label {
+            color: #7a8e9b;
+            font-size: 0.9rem;
+        }
+        
+        /* service cards */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-weight: 700;
+            color: #1e3c4c;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 3px;
+            background: #1e6f5c;
+            border-radius: 3px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(30,111,92,0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: rgba(30,111,92,0.2);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #e8f5f0 0%, #d1ebe3 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .service-icon i {
+            font-size: 2.2rem;
+            color: #1e6f5c;
+        }
+        
+        .service-card h4 {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #1e3c4c;
+        }
+        
+        .service-card p {
+            font-size: 0.85rem;
+            color: #7a8e9b;
+            margin-bottom: 15px;
+        }
+        
+        .service-badge {
+            background: #e8f5f0;
+            color: #1e6f5c;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        /* how it works */
+        .how-it-works {
+            background: white;
+            border-radius: 30px;
+            padding: 50px 30px;
+            margin: 50px 0;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #1e6f5c;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+        
+        .step h5 {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .step p {
+            color: #7a8e9b;
+            font-size: 0.85rem;
+        }
+        
+        /* platforms section */
+        .platforms-section {
+            background: white;
+            border-radius: 30px;
+            padding: 40px 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .platform-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #f8f9fa;
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin: 8px;
+            font-weight: 600;
+            color: #1e3c4c;
+        }
+        
+        .platform-item i {
+            font-size: 1.3rem;
+        }
+        
+        .platform-item.abshir i { color: #1e6f5c; }
+        .platform-item.quwa i { color: #ffb347; }
+        .platform-item.mudad i { color: #3498db; }
+        .platform-item.baladi i { color: #2ecc71; }
+        
+        /* contact section */
+        .contact-section {
+            background: linear-gradient(135deg, #1e6f5c 0%, #155a4a 100%);
+            border-radius: 30px;
+            padding: 50px 30px;
+            margin: 50px 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-section h3 {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .btn-whatsapp-large {
+            background: #25D366;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        
+        .btn-whatsapp-large:hover {
+            background: #20b859;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .btn-call {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .btn-call:hover {
+            background: rgba(255,255,255,0.3);
+            color: white;
+        }
+        
+        /* footer */
+        footer {
+            background: #1e3c4c;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+            border-radius: 30px 30px 0 0;
+        }
+        
+        .whatsapp-fixed {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        
+        .whatsapp-fixed:hover {
+            transform: scale(1.1);
+            background: #20b859;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn-whatsapp-large, .btn-call {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- WhatsApp Fixed Button -->
+<a href="https://wa.me/966500000000?text=السلام عليكم،%20أحتاج%20خدمات%20مؤسسة%20طلاب%20الازدهار" class="whatsapp-fixed" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            طلاب الازدهار <span>|</span> خدمات رقمية
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">خدماتنا</a></li>
+                <li class="nav-item"><a class="nav-link" href="#howitworks">كيف نعمل</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <h1>ننفذ <span>خدماتك الحكومية</span><br>بدون عناء الحضور</h1>
+        <p class="subtitle">
+            منصة أبشر، قوى، مدد، بلدي والعديد من المنصات الأخرى<br>
+            نكمل جميع الإجراءات نيابة عنك وأنت في مكانك
+        </p>
+        <a href="https://wa.me/966500000000?text=السلام عليكم،%20أريد%20استشارة%20حول%20الخدمات" class="whatsapp-float-btn" target="_blank">
+            <i class="fab fa-whatsapp fa-2x"></i> تواصل معنا الآن
+        </a>
+    </div>
+</section>
+
+<!-- Stats -->
+<div class="container">
+    <div class="stats-section">
+        <div class="row">
+            <div class="col-md-3 col-6">
+                <div class="stat-box">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">عميل سعيد</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-box">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">رضا العملاء</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-box">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">ساعة</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-box">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">منصات حكومية</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Services Section -->
+<section id="services" class="container" style="margin: 60px auto;">
+    <div class="section-title">
+        <h2>الخدمات التي نقدمها</h2>
+    </div>
+    <div class="row g-4">
+        
+        <!-- أبشر -->
+        <div class="col-md-4 col-lg-3">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-fingerprint"></i>
+                </div>
+                <h4>منصة أبشر</h4>
+                <p>تجديد إقامة، إصدار تأشيرات، نقل خدمات، إصدار هوية وطنية</p>
+                <span class="service-badge">أكثر من 50 خدمة</span>
+            </div>
+        </div>
+        
+        <!-- قوى -->
+        <div class="col-md-4 col-lg-3">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h4>منصة قوى</h4>
+                <p>توثيق عقود العمل، تعديل المهن، إصدار الشهادات المهنية</p>
+                <span class="service-badge">للأفراد والمنشآت</span>
+            </div>
+        </div>
+        
+        <!-- مدد -->
+        <div class="col-md-4 col-lg-3">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h4>منصة مدد</h4>
+                <p>تمديد التأشيرات، خدمات العمالة المنزلية، نقل كفالة</p>
+                <span class="service-badge">إنجاز سريع</span>
+            </div>
+        </div>
+        
+        <!-- بلدي -->
+        <div class="col-md-4 col-lg-3">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h4>منصة بلدي</h4>
+                <p>إصدار رخص بلدية، تجديدها، تعديل النشاط التجاري</p>
+                <span class="service-badge">للمنشآت</span>
+            </div>
+        </div>
+        
+        <!-- ناجز -->
+        <div class="col-md-4 col-lg-3">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <h4>منصة ناجز</h4>
+                <p>الخدمات العدلية، التوثيق، الصكوك، الوكالات</p>
+                <span class="service-badge">وزارة العدل</span>
+            </div>
+        </div>
+        
+        <!-- تمر -->
+        <div class="col-md-4 col-lg-3">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h4>منصة تمر</h4>
+                <p>خدمات النقل والخدمات اللوجستية، رخص النقل</p>
+                <span class="service-badge">هيئة النقل</span>
+            </div>
+        </div>
+        
+        <!-- استفسار -->
+        <div class="col-md-4 col-lg-3">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h4>خدمات أخرى</h4>
+                <p>استشارات قانونية، متابعة معاملات، ترجمة معتمدة</p>
+                <span class="service-badge">طلب مخصص</span>
+            </div>
+        </div>
+        
+        <!-- شامل -->
+        <div class="col-md-4 col-lg-3">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h4>خدمة شاملة</h4>
+                <p>حزمة متكاملة لإنهاء جميع معاملاتك في منصة واحدة</p>
+                <span class="service-badge">الأكثر طلباً</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section id="howitworks" class="container">
+    <div class="how-it-works">
+        <div class="section-title">
+            <h2>كيف تحصل على خدمتك؟</h2>
+            <p style="color: #7a8e9b;">خطوات بسيطة وسريعة</p>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h5>تواصل معنا</h5>
+                    <p>اتصل بنا أو راسلنا على واتساب</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h5>حدد الخدمة</h5>
+                    <p>أخبرنا بالخدمة التي تحتاجها</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h5>أرسل المستندات</h5>
+                    <p>ارسل الوثائق على واتساب</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h5>ننفذ الخدمة</h5>
+                    <p>نقوم بتنفيذ خدمتك وإرسال النتيجة</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Platforms We Support -->
+<div class="container">
+    <div class="platforms-section">
+        <h4 style="color: #1e3c4c; margin-bottom: 20px; font-weight: 700;">المنصات التي نعمل عليها</h4>
+        <div>
+            <span class="platform-item abshir"><i class="fas fa-fingerprint"></i> أبشر</span>
+            <span class="platform-item quwa"><i class="fas fa-briefcase"></i> قوى</span>
+            <span class="platform-item mudad"><i class="fas fa-clock"></i> مدد</span>
+            <span class="platform-item"><i class="fas fa-store"></i> بلدي</span>
+            <span class="platform-item"><i class="fas fa-gavel"></i> ناجز</span>
+            <span class="platform-item"><i class="fas fa-truck"></i> تمر</span>
+            <span class="platform-item"><i class="fas fa-chalkboard-user"></i> منصة العمل الحر</span>
+            <span class="platform-item"><i class="fas fa-building"></i> وزارة التجارة</span>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<section id="contact" class="container">
+    <div class="contact-section">
+        <h3>نحن هنا لخدمتك</h3>
+        <p>تواصل معنا الآن وسنرد عليك خلال دقائق</p>
+        <div class="contact-buttons">
+            <a href="https://wa.me/966500000000?text=السلام عليكم،%20أريد%20تنفيذ%20خدمة%20حكومية" class="btn-whatsapp-large" target="_blank">
+                <i class="fab fa-whatsapp fa-2x"></i> واتساب
+            </a>
+            <a href="tel:+966500000000" class="btn-call">
+                <i class="fas fa-phone-alt fa-2x"></i> اتصال مباشر
+            </a>
+        </div>
+        <p class="mt-4" style="font-size: 0.9rem; opacity: 0.8;">
+            <i class="fas fa-envelope"></i> example@talib.com | 
+            <i class="fas fa-clock"></i> نعمل يومياً من 9ص - 10م
+        </p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center text-md-start mb-3">
+                <h5 style="font-weight: 700;">طلاب الازدهار</h5>
+                <p style="font-size: 0.85rem; opacity: 0.7;">ننفذ خدماتك الحكومية الرقمية بكل احترافية وسرعة</p>
+            </div>
+            <div class="col-md-4 text-center mb-3">
+                <h6>روابط سريعة</h6>
+                <ul class="list-unstyled" style="font-size: 0.85rem;">
+                    <li><a href="#home" style="color: white; text-decoration: none; opacity: 0.7;">الرئيسية</a></li>
+                    <li><a href="#services" style="color: white; text-decoration: none; opacity: 0.7;">خدماتنا</a></li>
+                    <li><a href="#contact" style="color: white; text-decoration: none; opacity: 0.7;">اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 text-center text-md-end">
+                <h6>تابعنا</h6>
+                <a href="#" style="color: white; margin: 0 10px; opacity: 0.7;"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#" style="color: white; margin: 0 10px; opacity: 0.7;"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" style="color: white; margin: 0 10px; opacity: 0.7;"><i class="fab fa-whatsapp fa-lg"></i></a>
+            </div>
+        </div>
+        <hr style="opacity: 0.2;">
+        <div class="text-center" style="font-size: 0.8rem; opacity: 0.6;">
+            © 2025 مؤسسة طلاب الازدهار - جميع الحقوق محفوظة
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // تغيير رقم واتساب - استبدل 966500000000 برقم مؤسستك الفعلي
+    // مثال: 966512345678
+    
+    // يمكنك تعديل الرقم في جميع الروابط من خلال البحث عن:
+    // "966500000000" واستبداله برقم واتساب مؤسستك
+    
+    // لمنع تكرار التعديل يدوياً، يمكن استخدام هذا السكربت:
+    document.addEventListener('DOMContentLoaded', function() {
+        const whatsappNumber = "966500000000"; // غيّر هذا إلى رقمك
+        const links = document.querySelectorAll('a[href*="wa.me"]');
+        links.forEach(link => {
+            let oldHref = link.getAttribute('href');
+            let newHref = oldHref.replace(/966\d{9}/, whatsappNumber);
+            link.setAttribute('href', newHref);
+        });
+        
+        // تغيير رقم الهاتف في روابط الاتصال
+        const callLinks = document.querySelectorAll('a[href*="tel:"]');
+        callLinks.forEach(link => {
+            link.setAttribute('href', 'tel:' + whatsappNumber);
+        });
+    });
+</script>
+
+</body>
+</html>
